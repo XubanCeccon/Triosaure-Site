@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Triosaure®</title>
+	<link rel = "icon" type = "image/png" href = "IMAGES/logo_mini.png">
+	<link rel="stylesheet" href="CSS/style_index.css" />
+
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+	<style type="text/css">
+            #map{ /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
+                height:400px;
+				width:50%;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+
+            }
+    </style>
+		<script src= "java/java.js">
+	</script>
+
+</head>
+<body>
+	<!-- le menu du site -->
+	<nav id="menu">
+		<ul>
+			<li><a href="index_new.html">Home</a></li>
+			<li><a href="toto.html">Toto</a></li>
+			<li><a href="tata.html">Tata</a></li>
+			<li><a href="about_us.html">About us</a></li>
+			<li><a href="#bottom">Contact</a></li>
+		</ul>
+	</nav>
+	<div class="banner">
+		<img class = "banner-image" src="IMAGES/banner.jpg">
+	</div>
+
+<h1> Le projet TRIOSAURE : </h1>
+
+	<div class = "mission">
+		<p>Dans le cadre de notre formation Bachelor de technologies à l’ESTIA, nous devons étudier le fonctionnement d’un projet
+			 du début à la fin, travailler en coopération, et découvrir les méthodes de conception et de travail en équipe nécessaires
+			  au bon déroulement d'un projet pluridisciplinaire.</p>
+	</div>
+
+
+
+	<p class="bloc-image">
+	       <img src="IMAGES/education1.png" alt="EDUCATION"  />
+	<span> <br> <strong>EDUCATION</strong> </span>
+	</p>
+	<p class="bloc-image">
+	       <img src="IMAGES/ecologie.png" alt="Dune" />
+	<span> <br> <strong>ECOLOGIE</strong> </span>
+	</p>
+	<p class="bloc-image">
+	       <img src="IMAGES/futuriste1.png" alt="Dune"  />
+	<span> <br> <strong>AVENIR</strong></span>
+	</p>
+
+
+
+<div class = "mission">
+	<p>Ainsi, nous devons étudier, concevoir et réaliser un système visant à aider les usagers à trier leurs déchets à l’aide d’une interaction
+		 pédagogique. Nous avons choisi de nommer notre produit « Triosaure ». Ce nom lui confère une consonance infantile visant les principaux
+		 utilisateurs qui ne sont autres que les enfants de 6 à 10 ans. Il permettra aux enfants d’acquérir des connaissances sur les bonnes
+		 pratiques à adopter par rapport au tri. </p>
+</div>
+
+
+<section class="wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
+    <div class="container">
+        <div class="row">
+            <!-- counter -->
+            <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated" data-wow-duration="300ms" style="visibility: visible; animation-duration: 300ms; animation-name: fadeInUp;"> <i class="fa fa-beer medium-icon"></i> <span id="anim-number-pizza" class="counter-number"></span> <span class="timer counter alt-font appear" data-to="980" data-speed="7000">2800</span>
+                <p class="counter-title">Beer Ordered</p>
+            </div> <!-- end counter -->
+            <!-- counter -->
+            <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated" data-wow-duration="600ms" style="visibility: visible; animation-duration: 600ms; animation-name: fadeInUp;"> <i class="fa fa-heart medium-icon"></i> <span class="timer counter alt-font appear" data-to="980" data-speed="7000">980</span> <span class="counter-title">Happy Clients</span> </div> <!-- end counter -->
+            <!-- counter -->
+            <div class="col-md-3 col-sm-6 bottom-margin-small text-center counter-section wow fadeInUp xs-margin-bottom-ten animated" data-wow-duration="900ms" style="visibility: visible; animation-duration: 900ms; animation-name: fadeInUp;"> <i class="fa fa-anchor medium-icon"></i> <span class="timer counter alt-font appear" data-to="810" data-speed="7000">810</span> <span class="counter-title">Projects Completed</span> </div> <!-- end counter -->
+            <!-- counter -->
+            <div class="col-md-3 col-sm-6 text-center counter-section wow fadeInUp animated" data-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-name: fadeInUp;"> <i class="fa fa-user medium-icon"></i> <span class="timer counter alt-font appear" data-to="600" data-speed="7000">600</span> <span class="counter-title">Clients Served</span> </div> <!-- end counter -->
+        </div>
+    </div>
+</section>
+
+
+<div class = "stat">
+ <p> 51% des francais trient systématiquement </p>
+ <p> 55 Kg de dechet triés par personne en 2019 </p>
+ <p> 1,6 million de tonnes de CO2 évitées</p>
+ <p> 30 millions de francais peuvent trier TOUS leurs emballages</p>
+</div>
+
+
+
+
+<div class = "contexte">
+	<p>Ces chiffres montrent l'importance du tri selectif et surtout sa necessité. En montrant et expliqant aux enfants dès leur plus jeune age,
+		 le fonctionnement du tri et sa bonne pratique, nous esperons renforcer ces chiffres. Cela consitue une etape essentiel pour preserver notre
+		 planète aussi longtemps que possible.
+	</p>
+</div>
+
+
+
+
+<div class = "map">
+<p>Ci-dessous vous pouvez retrouver les différents sites sur lesquels se situent notre système :
+</p>
+</div>
+
+
+
+
+<div id="map">
+	    <!-- Ici s'affichera la carte -->
+</div>
+
+
+        <!-- Fichiers Javascript -->
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+<script type="text/javascript">
+            // On initialise la latitude et la longitude de Paris (centre de la carte)
+            var lat = 43.44608915608209;
+            var lon = -1.5537658442331754;
+            var macarte = null;
+            // Fonction d'initialisation de la carte
+            function initMap() {
+                // Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
+                macarte = L.map('map').setView([lat, lon], 11);
+                // Leaflet ne récupère pas les cartes (tiles) sur un serveur par défaut. Nous devons lui préciser où nous souhaitons les récupérer. Ici, openstreetmap.fr
+                L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+                    // Il est toujours bien de laisser le lien vers la source des données
+                    attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
+                    minZoom: 1,
+                    maxZoom: 20
+                }).addTo(macarte);
+                var marker = L.marker([lat, lon]).addTo(macarte);
+                marker.bindPopup("<p> <a href='toto.html'>Prototype Triosaure</a></p>")
+            }
+            window.onload = function(){
+		// Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
+		initMap();
+            };
+
+</script>
+
+
+
+
+<div class = "concurence">
+	<p> Le bachelor est composé d'une trentaine d'étudiants, regroupé par 3 ou 4, ainsi nous vous proposons d'aller découvrir leurs projets : </p>
+	<br>
+</div>
+
+<p class="concu">
+ <img src="IMAGES/eductri.png" alt="EDUC'TRI" />
+<span> <br> <strong> <a href="https://www.estia.fr/" class="lien"> EDUC'TRI </a></strong> </span>
+</p>
+
+<p class="concu">
+ <img src="IMAGES/romeo.png" alt="EDUC'TRI" class="romeo" />
+<span> <br> <strong> <a href="https://www.estia.fr/" class="lien"> ROMEO </a></strong> </span>
+</p>
+
+<p class="concu">
+ <img src="IMAGES/garbidart.png" alt="GARDI'DART" class="garbi" />
+<span> <br> <strong> <a href="https://www.estia.fr/" class="lien"> GARBI'DART </a></strong> </span>
+</p>
+
+<br>
+
+
+
+
+<div class="curved-div">
+  <svg class = "svgprueba" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280">
+  <path fill="#264653" fill-opacity="1" d="M0,224L120,234.7C240,245,480,267,720,256C960,245,1200,203,1320,181.3L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+</svg>
+</div>
+
+<div class="footer-container" 	id="bottom">
+
+	<div class="footer">
+
+		<div class="footer-heading footer-0">
+
+
+			<img src="IMAGES/logo-estia.png" alt="Logo Estia" class = "footer_image1">
+		</div>
+		<div class="footer-heading footer-1">
+			<h3>ÉCOLE D’INGÉNIEURS ESTIA</h3>
+			<a>Technopole Izarbel</a>
+			<a>90 Allée Fauste d’Elhuyar</a>
+			<a>64210 BIDART - FRANCE</a>
+
+		</div>
+		<div class="footer-heading footer-2">
+			<img src="IMAGES/icon/recycle-bin.png" alt="Logo Triosaure" class = "footer_logo">
+		</div>
+
+		<div class="footer-heading footer-3">
+			<h3>Outlook contact</h3>
+			<a href="mailto:a.berard@net.estia.fr">BERARD Arnaud</a>
+			<a href="mailto:m.bourra@net.estia.fr">BOURRA Maxime</a>
+			<a href="mailto:l.faure@net.estia.fr">FAURE Lyderic</a>
+			<a href="mailto:x.ceccon@net.estia.fr">CECCON Xuban</a>
+		</div>
+
+	</div>
+</div>
+</body>
+</html>
