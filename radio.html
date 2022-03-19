@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Gradient Ordered List</title>
+  <link rel="stylesheet" href="CSS/style_radio.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="banner">
+		<img class = "banner-image" src="IMAGES/banner_radio.png"
+</div>
+<div class="retour">
+	<div class="btn_radio">
+		<a class = "btn" href="projet.html">Retour Projet</a>
+	</div>
+</div>
+<div class="container">
+  <h3 class="heading">Exigences client</h3>
+</div>
+<main>
+  <ol class="gradient-list">
+    <li>Fournir l’état de remplissage, l’historique des interventions et des alertes de disfonctionnement </li>
+    <li>Alimentation, accès aux données des capteurs, pouvoir agir sur le système</li>
+    <li>S’intégrer dans le système, respecter le poids et la taille, ne pas être dangereux</li>
+    <li>Mise en marche simple</li>
+    <li>S’adapter à son environnement. </li>
+  </ol>
+</main>
+
+<div class="ikastola">
+	<h2>Objectif du projet</h2>
+
+	<p>Deux démonstrateurs du système seront installés dans une <a target="_blank" href="https://ikastola.eus/ikastola/zer_da" class="underlined underlined--offset">Ikastola</a>. L'ikastola en question est visible sur la carte ci-dessous.</p>
+	<a target="_blank" class="test" href="IMAGES/ikastola.png"><img class="carte"src="IMAGES/ikastola.png" alt="Carte de l'ikastola"></a>
+</div>
+
+<div class="composants">
+<hr>
+<h1>Différence Module/SOC</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1q6K53nV-hQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<hr>
+
+
+<h1>Présentation des <br>composants: </h1>
+
+
+
+
+<p>Nous allons comparer 4 composants utilisant des méthodes de communication différentes. Nous retrouvons le <a target="_blank" href="https://www.ti.com/lit/ds/symlink/cc2420.pdf?ts=1619890698196&ref_url=https%253A%252F%252Fwww.google.com%252F" class="underlined underlined--offset">CC2420 </a> de Texas Instrument, le <a target="_blank" href="http://ww1.microchip.com/downloads/en/devicedoc/50002346c.pdf" class="underlined underlined--offset">RN2483 </a> de Microchip, <a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/70005304B.pdf" class="underlined underlined--offset">l’ATWINC15x0 </a> de Microchip, le <a target="_blank" href="https://datasheet.octopart.com/CC3200AUDBOOST-Texas-Instruments-datasheet-37143459.pdf" class="underlined underlined--offset">CC3200 </a> de Texas Instruments et le <a target="_blank" href="https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2711/rpi_DATA_2711_1p0_preliminary.pdf" class="underlined underlined--offset">RaspberryPi 4</a>
+. </p>
+<table class="content-table">
+  <thead>
+    <tr>
+      <th>Critère </th>
+      <th>Atwinc15x0</th>
+      <th>CC2420</th>
+      <th>CC3200</th>
+      <th>RN2483</th>
+      <th>RaspberryPi 4B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sensibilité</td>
+      <td>-95 dBm</td>
+      <td>-90 dBm </td>
+      <td>-74 dBm </td>
+      <td>-146 dBm</td>
+      <td>-- </td>
+    </tr>
+    <tr class="active-row" >
+      <td>Puissance émise</td>
+      <td>17.5 dBm </td>
+      <td>-24 dBm </td>
+      <td>14 dBm </td>
+      <td>14 dBm</td>
+      <td>20dBm </td>
+    </tr>
+    <tr>
+      <td>Gain</td>
+      <td>-1 dBm </td>
+      <td>9 dBm </td>
+      <td>-- </td>
+      <td>-- </td>
+      <td>-- </td>
+    </tr>
+    <tr class="active-row" >
+      <td>Portée</td>
+      <td>3739 m </td>
+      <td>55m</td>
+      <td>264m </td>
+      <td>5km – 15km </td>
+      <td>30-300m</td>
+    </tr>
+    <tr>
+      <td>f de communication</td>
+      <td>2.4 GHz </td>
+      <td>2.4 GHz </td>
+      <td>2.4 GHz </td>
+      <td>433/868 MHz </td>
+      <td>5 -2.4 GHz </td>
+    </tr>
+    <tr class="active-row">
+      <td>Débit  </td>
+      <td>-- </td>
+      <td>250kbps </td>
+      <td>13MBps </td>
+      <td>300kbps </td>
+      <td>433 Mbps – 2Mbps </td>
+    </tr>
+    <tr>
+      <td>Type de protocol </td>
+      <td>Wifi direct </td>
+      <td>Zigbee</td>
+      <td>Wifi</td>
+      <td>Lora</td>
+      <td>Wifi / Bluetooth 5.0 </td>
+    </tr>
+    <tr class="active-row">
+      <td>PCB/MODULE </td>
+      <td>MODULE</td>
+      <td>MODULE</td>
+      <td>MODULE</td>
+      <td>MODULE</td>
+      <td>PCB</td>
+    </tr>
+    <tr>
+      <td>Dimensions </td>
+      <td>21.7*14.7*2.1mm </td>
+      <td>7*7mm </td>
+      <td>9*9mm </td>
+      <td>17.8*26.7*3.34mm</td>
+      <td>85*56*17mm</td>
+    </tr>
+    <tr class="active-row">
+      <td>Tension alimentation </td>
+      <td>2.7 – 3.6 V </td>
+      <td>1.6 – 2 V </td>
+      <td>2.1 - 3.6 V </td>
+      <td>3.3V  </td>
+      <td>5V</td>
+    </tr>
+    <tr>
+      <td>Ampérage max </td>
+      <td>380 µAh </td>
+      <td>426 µAh </td>
+      <td>825 µAh </td>
+      <td>40 mAh </td>
+      <td>500mA</td>
+    </tr>
+    <tr class="active-row">
+      <td>Compatibilité Arduino / Raspberry</td>
+      <td>?</td>
+      <td>Oui</td>
+      <td>Oui</td>
+      <td>Oui</td>
+      <td>Oui</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<hr>
+<h1>Wi-Fi</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kbajaGrJtEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<hr>
+<h1>Bluetooth</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_bKkE21etg0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<hr>
+<h1>Zigbee</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uZ5m_fUz5BA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<hr>
+<h1>LoraWan</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2_iuxr1F7vI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<hr>
+
+
+<div class="FRIIS">
+<br>
+<p>Maintenant que nous en savons plus sur chaque moyen de communication,nous allons calculer la portée théorique de chacun de nos composants. Pour cela, nous nous sommes basés sur les données de puissance, sensibilité et le gain pour calculer la portée estimée de chacun des émetteurs récepteurs. Pour les calculs de la portée nous nous sommes basés sur la formule de FRIIS : </p>
+</div>
+<div class="calculs">
+<p>Pr = Pe−Pce+Ge−Pt+Gr−Pcr (en dB)<br><br> avec Pt = -147.56 +20log(f) + 20log(D)<br> <br>Ainsi on obtient: 20log(D) = Pe - Pce + Ge + 147.56 - 20log(f) + Gr - Pcr -Pr</p>
+<div class="FRIIS">
+<p>Ensuite il nous suffit de résoudre l’équation. les résultats obtenus sont ceux dans le tableau ci-dessus. Par sécurité, nous avons cherché les valeurs de portée types de chacune des voies de communication afin de s’assurer de l’exactitude de nos calculs.</p>
+<div>
+
+</div>
+
+
+<div>
+<table class="content-table">
+  <thead>
+    <tr>
+      <th>Type </th>
+      <th>Wifi </th>
+      <th>Zigbee</th>
+      <th>Wifi direct  </th>
+      <th>Lora </th>
+      <th>Bluetooth 5.0 </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Portée extérieur</td>
+      <td>300m </td>
+      <td>100m (réseau maillé) </td>
+      <td>140m </td>
+      <td>20km (rural) </td>
+      <td>150m </td>
+    </tr>
+    <tr>
+      <td>Portée intérieur  </td>
+      <td>35m </td>
+      <td>20m</td>
+      <td>38m</td>
+      <td>5km (urbain) </td>
+      <td>30m</td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+
+<div class="bloc">
+  <div class="select">
+    <select>
+      <option>récap des données à transmettre :</option>
+      <option value="1">Alerte : 2 octets</option>
+      <option value="2">Intervention : 2 octets</option>
+      <option value="3">Taux de remplissage : 16 octets</option>
+      <option value="4">Paramétrage : 100 ko</option>
+    </select>
+  </div>
+</div>
+
+
+
+
+
+<!-- partial -->
+<h1>THAT WAS <br> A COOL<br> PRESENTATION</h1>
+</body>
+</html>

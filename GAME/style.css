@@ -1,0 +1,81 @@
+body
+{
+	padding: 0;
+	margin: 0;
+}
+.container
+{
+	width: 60%;
+	margin: 20px auto;
+}
+.bgimage
+{
+	padding: 10px 20px;
+	background-image: url("images/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+header h1
+{
+	margin: 0;
+	float: left;
+}
+.scoretimer
+{
+	float: right;
+	font-size: 24px;
+}
+#score
+{
+	margin: 0 20px 0 0;
+	font-size: 24px;
+	background: #000;
+	color: #fff;
+	display: inline-block;
+	padding: 5px 10px;
+}
+#timer
+{
+	margin: 0 20px 0 0;
+	font-size: 24px;
+	background: #000;
+	color: #fff;
+	display: inline-block;
+	padding: 5px 10px;
+}
+.allimages
+{
+	border: 2px solid #000;
+	border-radius: 20px;
+	padding: 20px;
+	height: 300px;
+}
+.allimages img
+{
+	margin: 10px 40px;
+}
+.restart
+{
+	width: 100%;
+	text-align: center;
+}
+#playAgain
+{
+	display: none;
+	background: #000;
+	color: #fff;
+	padding: 5px 20px;
+	font-size: 24px;
+	border: none;
+	cursor: pointer;
+}
+.trashbin
+{
+	margin: 6px;
+}
+.trashbin img
+{
+	padding: 6px;
+	display: inline-block;
+}

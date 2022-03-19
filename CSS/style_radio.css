@@ -1,0 +1,349 @@
+/*** FONTS ***/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:900|Raleway:400,400i,700,700i);
+
+ol.gradient-list > li::before, ol.gradient-list > li {
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+}
+
+/*** STYLE ***/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+
+body {
+	padding: 0;
+  margin: auto;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size:25px;
+  background-color: #F4A261;
+
+}
+p{
+	color: black;
+  text-align:middle;
+  margin-right:200px;
+  margin-left:200px;
+}
+
+main {
+  color: #1d1f20;
+  font-family: "Raleway", sans-serif;
+  display: block;
+  margin: 0 auto;
+  max-width: 80rem;
+  padding: 1rem;
+  font-size: 25px;
+}
+
+ol.gradient-list {
+  counter-reset: gradient-counter;
+  list-style: none;
+  margin: 1.75rem 0;
+  padding-left: 1rem;
+}
+ol.gradient-list > li {
+  background: white;
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  counter-increment: gradient-counter;
+  margin-top: 1rem;
+  min-height: 3rem;
+  padding: 1rem 1rem 1rem 3rem;
+  position: relative;
+}
+ol.gradient-list > li::before, ol.gradient-list > li::after {
+  background: linear-gradient(135deg, #2A9D8F 0%, #2A9D8F 100%);
+  border-radius: 1rem 1rem 0 1rem;
+  content: "";
+  height: 3rem;
+  left: -1rem;
+  overflow: hidden;
+  position: absolute;
+  top: -1rem;
+  width: 3rem;
+}
+ol.gradient-list > li::before {
+  align-items: flex-end;
+  content: counter(gradient-counter);
+  color: #1d1f20;
+  display: flex;
+  font: 900 1.5em/1 "Montserrat";
+  justify-content: flex-end;
+  padding: 0.125em 0.25em;
+  z-index: 1;
+}
+
+
+
+.banner {
+	margin-top:0px;
+}
+.banner>.banner-image{
+	width: 100%;
+	display:block;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Oswald', Helvetica, sans-serif;
+  font-size: 60px;
+  transform: skewY(-1deg);
+  letter-spacing: 4px;
+  word-spacing: -8px;
+  color: #2A9D8F;
+  text-shadow:
+    -1px -1px 0 #264653,
+    -2px -2px 0 #264653,
+    -3px -3px 0 #264653,
+    -4px -4px 0 #264653,
+
+    -30px 20px 40px dimgrey
+}
+
+.container {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color:#264653;
+  margin-bottom:-40px;
+}
+
+.heading {
+  font-size: 6vw;
+  text-shadow: 4px 4px 0px #E9C46A;
+  mix-blend-mode: normal;
+  animation: fadeIn 2.5s linear forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.btn {
+  background-color: #E9C46A;
+  box-shadow: 0 5px 0 #2A9D8F;
+  color: #264653;
+  padding: 0.5em 0.6em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size:30px;
+
+}
+.btn_radio{
+	 width: 100%;
+  text-align: center;
+
+}
+
+.btn:hover {
+  background-color: #2A9D8F;
+}
+
+.btn:active {
+  box-shadow: none;
+  top: 5px;
+}
+
+.carte{
+	width:600px;
+	border-radius: 8px;
+	border: 1px solid black;
+
+}
+.carte:hover {
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+.ikastola{
+
+	text-align:center;
+}
+
+.content-table {
+	text-align:center;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 15px;
+  min-width: 400px;
+  border-radius: 20px 20px 20px 20px;
+  overflow: hidden;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+  background-color:#2A9D8F;
+  font-weight: bold;
+  border: 1px solid white;
+}
+
+.content-table thead tr {
+  background-color: #264653;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+  text-align:center;
+  font-size: 1.5em;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #E9C46A;
+
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #264653;
+
+}
+
+
+
+
+.underlined {
+  color: black;
+  flex: 1;
+  font-size: 1em;
+  line-height: 1;
+  text-decoration: none;
+  background-image: linear-gradient(to right, #E9C46A 0, #E9C46A 100%);
+  background-position: 0 1.2em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background 1s;
+}
+.underlined:hover {
+  background-size: 100% 100%;
+}
+
+.underlined--offset {
+  background-position: 0 0.2em;
+  box-shadow: inset 0 -0.3em 0 0 #E9C46A;
+}
+
+.FRIIS{
+	text-align:justify;
+}
+
+.calculs{
+  text-align: center;
+}
+
+.justifrange{
+  text-align: justify;
+}
+
+iframe{
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+.bloc {
+  display: flex;
+  flex-direction: column;
+  align-items : center;
+  justify-content: center;
+
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+/*Réinitilaisation de la liste déroulante*/
+select {
+  appearance: none;
+  outline: 0;
+  border: 0 !important;
+  background: #264653;
+  background-image: none;
+  box-shadow: none;
+  font-size: 1.2em;
+}
+
+/*Ajout des couleurs de fond pour chaque option */
+select option[value="1"] {
+  background: #2A9D8F;
+  color: white;
+}
+
+select option[value="2"] {
+  background: #2A9D8F;
+  color: white;
+}
+
+select option[value="3"] {
+  background: #2A9D8F;
+  color: white;
+}
+
+select option[value="4"] {
+  background: #2A9D8F;
+  color: white;
+}
+
+/* Mise en forme de la div .select*/
+.select {
+  position: relative;
+  width: 540px;
+  height: 45px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin-top: 60px;
+}
+
+/* Mise en forme de la balise select*/
+select {
+  width: 600px;
+  height: 100%;
+  margin: 0;
+  padding-left: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* Mise en place de la flèche */
+.select::after {
+  content: '\276F';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 15px;
+  background: white;
+  pointer-events: none;
+  transform: rotate(90deg);
+  font-size: 1.5em;
+  background: #E9C46A;
+}
+
+
+.select:hover::after {
+  color: #E76F51;
+}
